@@ -6,7 +6,7 @@ export class PokemonService {
     const url = `https://pokeapi.co/api/v2/pokemon/${nome}`;
 
     return fetch(url)
-      .then((res: Response): any => res.json)
+      .then((res: Response): any => res.json())
       .then((obj: any): Pokemon => this.mapearPokemon(obj));
   }
 
